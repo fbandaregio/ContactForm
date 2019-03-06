@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* h1 {
+    background: green;
+    border-radius: 10px;
+    
+} */
+
+.round {
+    background: #2ad210;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .5) !important;
+    /* border-style: solid;
+    border-color: black; */
+    border-radius: 3em;
+}
+
+.color-h1 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

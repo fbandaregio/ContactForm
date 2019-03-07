@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="round p-5 m-3">
+        <h1 class="color-h1 pb-5">
+            Green Leaves
+        </h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="box-title m-b-0">Datos de Contacto</h3>
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <form [formGroup]="myForm" (ngSubmit)="enviarForm()">
+                                <div class="form-group row">
+                                    <label for="exampleInputEmail1" class="col-3 col-form-label">Nombre</label>
+                                    <div class="col-9">
+                                        <input formControlName="nombre" name="nombre" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }" id="exampleInputEmail1" placeholder="Nombre">
+                                        <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+                                            <div *ngIf="f.nombre.errors.required">Nombre es requerido</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="exampleInputEmail1" class="col-3 col-form-label">E-mail</label>
+                                    <div class="col-9">
+                                        <input formControlName="correo" name="correo" type="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" id="exampleInputEmail1" placeholder="Correo">
+                                        <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                                            <div *ngIf="f.correo.errors.required">Correo es requerido</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="phone" class="col-3 col-form-label">Teléfono</label>
+                                    <div class="col-9">
+                                        <input formControlName="telefono" name="telefono" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }" id="exampleInputPhone" placeholder="Teléfono">
+                                        <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback">
+                                            <div *ngIf="f.telefono.errors.required">Teléfono es requerido</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="date" class="col-3 col-form-label">Fecha</label>
+                                    <div class="col-9">
+                                        <!-- <input type="text" class="form-control" id="exampleInputPhone" placeholder="Fecha"> -->
+                                        <my-date-picker name="mydate" [options]="myDatePickerOptions" formControlName="myDate" [ngClass]="{ 'is-invalid': submitted && f.myDate.errors }" required></my-date-picker>
+                                        <div *ngIf="submitted && f.myDate.errors" class="invalid-feedback">
+                                            <div *ngIf="f.myDate.errors.required">Fecha es requerido</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="city" class="col-3 col-form-label">Ciudad y Estado</label>
+                                    <div class="col-9">
+                                        <input type="text" formControlName="ciudad" [ngClass]="{ 'is-invalid': submitted && f.ciudad.errors }" name="ciudad" class="form-control" id="exampleInputPhone" placeholder="Ciudad y Estado">
+                                        <!-- <select name="tipo" type="text">
+                                            <option *ngFor="let city of ciudades" [value]="city.ciudades">{{ city.ciudades }}</option>
+                                        </select> -->
+                                        <div *ngIf="submitted && f.ciudad.errors" class="invalid-feedback">
+                                            <div *ngIf="f.ciudad.errors.required">Ciudad y Estado es requerido</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10 float-right">Enviar</button>
+                                <!-- <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

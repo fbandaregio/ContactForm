@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="round p-5 m-3">
+        <h1 class="color-h1 pb-5">
+            Green Leaves
+        </h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="box-title m-b-0">Datos de Recibidos</h3>
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <p>
+                                Estimado {{ misdatos.nombre }}
+                            </p>
+                            <p>
+                                Hemos recibido sus datos y nos pondremos en contacto con usted a la brevedad posible. Enviaremos un correo con información a su cuenta: {{ misdatos.correo }}
+                            </p>
+                            <p class="float-right">
+                                Atte.
+                            </p>
+                            <p class="float-right">
+                                Green Leaves
+                            </p>
+                            <p class="float-right">
+                                {{ misdatos.ciudad }} a {{ misdatos.myDate }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
